@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url("tealeaf.png");
 }
 
 .App-link {
@@ -36,3 +37,131 @@
     transform: rotate(360deg);
   }
 }
+
+.supplierTable{
+  
+   border-collapse:collapse ;
+   table-layout: fixed;
+   width: 100%;
+}
+.supplierTable td,th{
+
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+}
+
+td{
+  margin-left: 3px;
+}
+.homeSpace{
+  
+      display:flex;
+}
+.mainPicture{
+  height:380px;
+  width:500px;
+  padding-left:300px;
+ }
+ .welcomeMessage{
+  margin-top: 2px;
+  padding-left:300px;
+  color:darkblue;
+ }
+.iconImages{
+  height:80px;
+  width:80px;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:50px;
+ }
+ .homespacebtn{
+  margin-top:30px;
+  margin-left:10px;
+  margin-bottom:10px;
+  height:50px;
+  width:100px;
+  justify-content:center;
+  border-width: 1px;
+  border-color:white;
+ }
+ .homespace{
+  display:flex;
+  align-items:center;
+  padding-left:200px;
+ }
+ .homespace2{
+  display:flex;
+  align-items:center;
+  padding-left: 300px;;
+ }
+.img{
+  border-radius:10px;
+  height:60px;
+  width:60px;
+  padding: 8px;
+}
+.btn{
+  text-align: center;
+  margin-left: 1px;
+}
+.id{
+  height:80px;
+  width:60px;
+}
+.receiptBottom{
+  display: flex;
+}
+.receiptBottomfeilds{
+  flex: auto;  
+  margin: 20px;
+}
+
+.receiptBottombtn{
+  display: flex;
+  margin-top: 60px;
+  margin-left: 750px;
+}
+.receiptBottombtns{
+  margin-left: 60px;
+}
+.receipt{
+  background-color:white;
+  padding: 20px;
+}
+.receiptTop{
+  display: flex;
+}
+.receiptTopName{
+  margin-top: 10px;
+}
+.searchBar{
+  width: 250px;
+  height: 30px;
+  margin-left: 55px;
+  margin-top: 25px;
+  padding-left: 30px;
+  
+}
+.suppliersHeading{
+  display: flex;
+}
+.sHeading{
+    margin-left: 300px;
+}
+.sSearch{
+   display: flex;
+}
+.searchimg{
+  height: 33px;
+  width:30px;
+  margin-top: 25px;
+  border: 1px solid;
+}
+
+
+
+
+
