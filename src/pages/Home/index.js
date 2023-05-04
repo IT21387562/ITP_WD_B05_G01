@@ -43,7 +43,8 @@ function Home() {
       <hr className="gap-1"/>
       <h1 className="font-bold text-2xl p-2 gap-2"> Vehicle Details</h1>
 
-    </div><div className="mt-2">
+    </div>
+    <div className="mt-2">
         <Row
           gutter={[16, 16]}>
           {vehicles.map((vehicle) => {
@@ -66,7 +67,14 @@ function Home() {
           })}
         </Row>
 
-      </div></>
+        
+
+  
+
+      </div>
+    </>
+
+    
   )
 }
 

@@ -83,35 +83,6 @@ function Reports() {
           </div>
         </Col>
 
-        {/* Issues */}
-        <Col span={15}>
-          <div className="shadow p-2">
-            <h1 className="text-secondary text-xl font-bold uppercase">
-              Vehicle Issues
-            </h1>
-            <hr />
-
-            <div className="flex justify-between mt-1">
-              <h1 className="text-md">Total Issues</h1>
-              <h1>{reports?.issues?.issuesCount}</h1>
-            </div>
-            <div className="flex justify-between mt-1">
-              <h1 className="text-md">Returned Issues</h1>
-              <h1>{reports?.issues?.returnedIssuesCount}</h1>
-            </div>
-
-            <div className="flex justify-between mt-1">
-              <h1 className="text-md">Pending Issues</h1>
-              <h1>{reports?.issues?.pendingIssuesCount}</h1>
-            </div>
-
-            {/* <div className="flex justify-between mt-1">
-              <h1 className="text-md">Overdue Issues</h1>
-              <h1>{reports?.issues?.overdueIssuesCount || 0}</h1>
-            </div> */}
-          </div>
-        </Col>
-
         {/* Places */}
 
         <Col span={15}>
@@ -141,6 +112,35 @@ function Reports() {
               <h1 className="text-md">Total Equipments</h1>
               <h1>{reports?.equipments?.equipmentsCount}</h1>
             </div>
+          </div>
+        </Col>
+
+        {/* Issues */}
+        <Col span={15}>
+          <div className="shadow p-2">
+            <h1 className="text-secondary text-xl font-bold uppercase">
+              Vehicle Issues
+            </h1>
+            <hr />
+
+            <div className="flex justify-between mt-1">
+              <h1 className="text-md">Total Issues</h1>
+              <h1>{reports?.issues?.issuesCount}</h1>
+            </div>
+            <div className="flex justify-between mt-1">
+              <h1 className="text-md">Returned Issues</h1>
+              <h1>{reports?.issues?.returnedIssuesCount}</h1>
+            </div>
+
+            <div className="flex justify-between mt-1">
+              <h1 className="text-md">Pending Issues</h1>
+              <h1>{reports?.issues?.pendingIssuesCount}</h1>
+            </div>
+
+            {/* <div className="flex justify-between mt-1">
+              <h1 className="text-md">Overdue Issues</h1>
+              <h1>{reports?.issues?.overdueIssuesCount || 0}</h1>
+            </div> */}
           </div>
         </Col>
 

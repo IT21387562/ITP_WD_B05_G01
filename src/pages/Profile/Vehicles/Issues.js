@@ -37,26 +37,25 @@ function Issues({
     getIssues();
   },[]);
 
-  const onReturnHandler = async(issue) => {
-    issue.vehicle = issue.vehicle._id;
-      try {
-        issue.returnDate = new Date();
-        dispatch(ShowLoading());
-        const response = await ReturnVehicle({
-          _id : issue._id,
-        });
-        dispatch(HideLoading());
-        if(response.success){
-          setIssues(response.data);
-          getIssues();
-        }else{
-          message.error(response.message);
-        }
-      } catch (error) {
-        dispatch(HideLoading());
-        message.error(error.message);
+  const onReturnHandler = async (issue) => {
+    try {
+      issue.returnedDate = new Date();
+      issue.vehicle = issue.vehicle._id;
+      dispatch(ShowLoading());
+      const response = await ReturnVehicle(issue);
+      dispatch(HideLoading());
+      if (response.success) {
+        message.success(response.message);
+        getIssues();
       }
-  }
+       else {
+        message.error(response.message);
+      }
+    } catch (error) {
+      dispatch(HideLoading());
+      message.error(error.message);
+    }
+  };
 
   const columns = [
     {
@@ -66,7 +65,8 @@ function Issues({
     {
       title: "Driver",
       dataIndex: "user",
-      // render:(user) => user.name,
+      // aaaa why i cant get name to the isuues formmmmm
+      render:(user) => user?.name,
     },
     {
       title: "Issue Date",
@@ -81,6 +81,13 @@ function Issues({
     {
       title: "Returned On",
       dataIndex:"returnedDate",
+      render : (returnedDate) => {
+        if(returnedDate){
+          return moment(returnedDate).format("DD-MM-YYYY");
+        }else{
+          return "Not retured yet"
+        }
+      }
     },
     {
       title: "Action",
@@ -88,7 +95,7 @@ function Issues({
       render : (action, record) =>{
         return(
           <Button 
-            title="Process Return"
+            title="Return Vehicle"
             onClick ={()=> onReturnHandler(record)}
             variant='outlined'
 
@@ -101,12 +108,15 @@ function Issues({
 
   return (
     <Modal
-        title = "Issues"
+        title = ""
         open = {open}
         onCancel={()=> setOpen(false)}
         footer={null}
-        width={1200}
+        width={1400}
         >
+          <h1 className="text-xl mt-1 mb-1 text-primary font-bold text-center "> 
+            ISSUES OF THIS VEHICLE
+          </h1>
         <Table
           columns={columns}
           dataSource={issues}
