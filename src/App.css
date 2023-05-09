@@ -49,6 +49,85 @@
   text-align: center;
 }
 
+.dailySupplierTable{
+  
+  border-collapse:collapse ;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.dailySupplierTable td{
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.dailySupplierTable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgba(0, 77, 77, 0.853);
+  color: white;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.dailySupplierTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.dailySupplierTable tr:hover {background-color: #ddd;}
+
+.dailySupplyTable{
+  table-layout: fixed;
+  width: 50%;
+  margin-left: 400px;
+}
+.dailySupplyTable td{
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.dailySupplyTable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgba(0, 77, 77, 0.853);
+  color: white;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.dailySupplyTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.dailySupplyTable tr:hover {background-color: #ddd;}
+
+
+.SupplierSupplyTable{
+  table-layout: fixed;
+  width: 75%;
+  margin-left: 200px;
+}
+.SupplierSupplyTable td{
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+.SupplierSupplyTable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgba(0, 77, 77, 0.853);
+  color: white;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.SupplierSupplyTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.SupplierSupplyTable tr:hover {background-color: #ddd;}
+
 h1{
   text-align: center;
 }
@@ -78,7 +157,7 @@ td{
   margin-left:50px;
  }
  .homespacebtn{
-  margin-top:30px;
+  margin-top:20px;
   margin-left:10px;
   margin-bottom:10px;
   height:50px;
@@ -86,11 +165,17 @@ td{
   justify-content:center;
   border-width: 1px;
   border-color:white;
+  
  }
  .homespace{
   display:flex;
   align-items:center;
   padding-left:200px;
+ }
+ .Supplierhomespace{
+  display:flex;
+  align-items:center;
+  padding-left:330px;
  }
  .homespace2{
   display:flex;
@@ -104,6 +189,7 @@ td{
   padding: 8px;
 }
 .btn{
+  margin-top: 30px;
   text-align: center;
   margin-left: 1px;
 }
@@ -145,6 +231,18 @@ td{
   padding-left: 30px;
   
 }
+
+.searchBarSupplier{
+  background-image: url(../src/component/images/search.png);
+  width: 250px;
+  height: 30px;
+  margin-left: 55px;
+  margin-top: 25px;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: 96px 0;
+  
+}
 .suppliersHeading{
   display: flex;
 }
@@ -154,6 +252,29 @@ td{
 .sSearch{
    display: flex;
 }
+.sSearchRegisteredReport{
+  display: flex;
+   margin-left: 0px;
+}
+.searchBarRegsitered{
+  width: 250px;
+  height: 30px;
+  margin-left: 2px;
+  margin-top: 25px;
+  padding-left: 30px;
+  
+}
+.sHeadingReport{
+    margin-left: 90px;
+}
+.sSearchReport{
+   display: flex;
+   margin-left: 350px;
+}
+.sSearchSupplierReport{
+  display: flex;
+  margin-left: 150px;
+}
 .searchimg{
   height: 33px;
   width:30px;
@@ -161,7 +282,166 @@ td{
   border: 1px solid;
 }
 
+.main{
+  background-color: rgba(255, 255, 255, 0.94);
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+}
 
+.reportpopup{
+  height: 195px;
+  width: 700px;
+  background-color: rgba(18, 157, 157, 0.907);
+  position: absolute;
+  top: 25%;
+  right: 25%;
+}
 
+.otherpopup{
+  height: 183px;
+  width: 700px;
+  background-color: rgba(72, 163, 163, 0.705);
+  position: absolute;
+  top: 25%;
+  right: 25%;
+}
+
+.reportpopupbtn{
+ display: flex;
+ justify-content: space-between;
+ padding: 0 0 0 280px;
+ background-color: rgba(0, 77, 77, 0.681);
+ height: 44px;
+}
+.popclosebtn{
+  background-color: aquamarine;
+}
+.mainSupplier{
+  background-color: rgba(255, 255, 255, 0.884);
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+.Signuppopup{
+  height: 450px;
+  width: 600px;
+  background-color: rgba(18, 157, 157, 0.811);
+  position: absolute;
+  top: 25%;
+  right: 30%;
+}
+.Signuppopupbtn{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 280px;
+  background-color: rgba(0, 77, 77, 0.681);
+  height: 50px;
+}
+.signuppopupheading{
+  size: 20px;
+  text-align: center;
+}
+.loginPageMidddle{
+  display: flex;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+.loginPictureSM{
+  padding-left: 60px;
+  height: 300px;
+  width: 300px;
+}
+.loginPictureS{
+  height:300px;
+  width: 300px;
+}
+
+.SupplierManagerSignuppopup{
+  height: 450px;
+  width: 400px;
+  background-color: rgba(100, 186, 186, 0.907);
+  position: absolute;
+  top: 15%;
+  right: 36%;
+  border: 1px;
+  border-radius: 4px;
+
+}
+
+.SupplierManagerLoginpopup{
+ height: 400px;
+  width: 350px;
+  background-color: rgba(100, 186, 186, 0.907);
+  position: absolute;
+  top: 15%;
+  right: 36%;
+  border: 1px;
+  border-radius: 4px;
+}
+
+.SupplierLoginPopup{
+  height: 350px;
+  width: 350px;
+  background-color: rgba(100, 186, 186, 0.907);
+  position: absolute;
+  top: 15%;
+  right: 36%;
+  border: 1px;
+  border-radius: 4px;
+}
+
+.SupplierManagerSignuppopupbtn{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 100px;
+  background-color: rgba(0, 77, 77, 0.681);
+  height: 44px;
+  border: 1px;
+  border-radius: 4px;
+}
+
+.SupplierManagerLoginpopupbtn{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 0px;
+  background-color: rgba(0, 77, 77, 0.681);
+  height: 44px;
+  border: 1px;
+  border-radius: 4px;
+}
+
+.SupplierLoginPopupbtn{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 0px;
+  background-color: rgba(0, 77, 77, 0.681);
+  height: 44px;
+  border: 1px;
+  border-radius: 4px;
+}
+.closebtn{
+height: 44px;
+}
+.lpopheading{
+  padding-left: 140px;
+  padding-top: 10px;
+  font-weight:700 ;
+  
+}
+.lpopheadingSU{
+  padding-left: 60px;
+  padding-top: 10px;
+  font-weight:700 ;
+  
+}
+.logout{
+  margin-left: 530px;
+  margin-bottom: 0.25px;
+}
 
 

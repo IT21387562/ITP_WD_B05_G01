@@ -5,7 +5,7 @@ import Supply from '../Supplies/Supply';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@mui/material';
 import Search from '../images/search.png'
-const URL="http://localhost:5000/supplies";
+const URL="http://localhost:5000/supplies/Allsupplies";
 
 
 
@@ -61,7 +61,7 @@ const Supplies = () =>  {
           </div>
         ))}  
         <div className='btn'>
-         <Button  variant="contained" className='button'  color="secondary" size="medium" LinkComponent={NavLink} to="/">Back</Button>
+         <Button  variant="contained" className='button'  color="secondary" size="medium" LinkComponent={NavLink} to="/Home">Back</Button>
          </div>
       </div>
     );

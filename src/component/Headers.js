@@ -19,10 +19,9 @@ export const Header = () => {
           value={value} 
           onChange={(e,val)=>setValue(val)}>
             <Tab LinkComponent={NavLink} to="/" label='About Us'/>
-            <Tab LinkComponent={NavLink} to="/suppliers" label='Gallery'/>
-            <Tab label='Team'/>
+            <Tab LinkComponent={NavLink} to="/" label='Gallery'/>
+            <Tab LinkComponent={NavLink} to="/" label='Team'/>
             <Tab label='Product'/>
-            <Tab LinkComponent={NavLink} to="/supplierHome" label='Supplier'/>
           </Tabs>
           </Toolbar>
             

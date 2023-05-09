@@ -4,15 +4,14 @@ import { useNavigate, useParams,NavLink } from 'react-router-dom';
 import {TextField,Button,Typography,FormLabel} from '@mui/material';
 import {Box} from '@mui/system';
 
-
-const SupplierDetail = () => {
+const SupplierUpdateDetails = () => {
     const [inputs,setInputs]=useState({});
-    const id=useParams().id;
+    const id=useParams().name;
     const history=useNavigate();
     useEffect(()=>{
         const fetchHandler=async()=>{
             await axios
-            .get(`http://localhost:5000/suppliers/${id}`)
+            .get(`http://localhost:5000/suppliers/Allsuppliers/search/${id}`)
             .then((res)=>res.data)
             .then(data=>setInputs(data.supplier));
         };
@@ -20,7 +19,7 @@ const SupplierDetail = () => {
     },[id]);
 
     const sendRequest=async()=>{
-         await axios.put(`http://localhost:5000/suppliers/${id}`,{
+         await axios.put(`http://localhost:5000/suppliers/Allsuppliers/search/${id}`,{
             name:String(inputs.name),
             threshold:String(inputs.threshold),
             email:String(inputs.email),
@@ -32,7 +31,7 @@ const SupplierDetail = () => {
     }
     const handleSubmit=(e)=>{
         e.preventDefault();
-        sendRequest().then(()=>history("/suppliers"));
+        sendRequest().then(()=>history("/supplierHome"));
 
     };
     const handleChange=(e)=>{
@@ -58,8 +57,6 @@ const SupplierDetail = () => {
         <Typography variant='h4' align='center'>Update Supplier</Typography>
             <FormLabel>Name</FormLabel>
             <TextField name="name" variant="outlined"  value={inputs.name} onChange={handleChange} fullWidth  /><br/>
-            <FormLabel>Threshold</FormLabel>
-            <TextField name="threshold" type="number" variant="outlined"  value={inputs.threshold} onChange={handleChange} fullWidth /><br/>
             <FormLabel>Email</FormLabel>
             <TextField name="email" variant="outlined"  value={inputs.email} onChange={handleChange} fullWidth /><br/>
             <FormLabel>Contact</FormLabel>
@@ -71,11 +68,10 @@ const SupplierDetail = () => {
             <FormLabel>Address Line 3</FormLabel>
             <TextField name="adressline3" variant="outlined"  value={inputs.adressline3} onChange={handleChange} fullWidth /><br/>
             <Button variant="contained"   size="medium" type="submit"  fullWidth >Update</Button><br/>
-            <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/Home" fullWidth>Back</Button>
+            <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/supplierHome" fullWidth>Back</Button>
         </Box>
       </form>)}
     </div>;
-  
-};
+}
 
-export default SupplierDetail
+export default SupplierUpdateDetails

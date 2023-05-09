@@ -12,6 +12,7 @@ const Addsupply= () => {
         weight:'',
         payment:'',
         collectorName:'',
+        date:'',
         
     });
 
@@ -28,6 +29,7 @@ const Addsupply= () => {
         weight:String(inputs.weight),
         payment:String(inputs.payment),
         collectorName:String(inputs.collectorName),
+        date:String(inputs.date),
       }).then((res)=>res.data);
     };
     const handleSubmit=(e)=>{
@@ -58,8 +60,10 @@ const Addsupply= () => {
             <TextField name="payment" variant="outlined" value={inputs.payment} onChange={handleChange} fullWidth /><br/>
             <FormLabel>Collector Name</FormLabel>
             <TextField name="collectorName" variant="outlined"  value={inputs.collectorName} onChange={handleChange} fullWidth/><br/>
-            <Button variant="contained"   size="medium" type="submit"  fullWidth >Register</Button><br/>
-            <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/" fullWidth>Back</Button>
+            <FormLabel>Date</FormLabel>
+            <TextField name="date" type="date" variant="outlined"  value={inputs.date} onChange={handleChange} fullWidth/><br/>
+            <Button variant="contained"   size="medium" type="submit"  fullWidth >Add Supply</Button><br/>
+            <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/Home" fullWidth>Back</Button>
         </Box>
       </form>
       </div>

@@ -62,7 +62,7 @@ const SuppliesDetail = () => {
             <FormLabel>Collector Name</FormLabel>
             <TextField name="collectorName" variant="outlined"  value={input.collectorName} onChange={handleChange} fullWidth/><br/>
             <Button variant="contained"   size="medium" type="submit"  fullWidth >Update</Button><br/>
-            <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/" fullWidth>Back</Button>
+            <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/Home" fullWidth>Back</Button>
         </Box>
       </form>)}
       

@@ -14,7 +14,8 @@ const Addsuppliers = () => {
         contact:'',
         adressline1:'',
         adressline2:'',
-        adressline3:''
+        adressline3:'',
+        date:'',
     });
 
     const handleChange=(e)=>{
@@ -33,6 +34,7 @@ const Addsuppliers = () => {
         adressline1:String(inputs.adressline1),
         adressline2:String(inputs.adressline2),
         adressline3:String(inputs.adressline3),
+        date:String(inputs.date),
       }).then((res)=>res.data);
     };
     const handleSubmit=(e)=>{
@@ -69,8 +71,10 @@ const Addsuppliers = () => {
             <TextField name="adressline2" variant="outlined"  value={inputs.adressline2} onChange={handleChange} fullWidth /><br/>
             <FormLabel>Address Line 3</FormLabel>
             <TextField name="adressline3" variant="outlined"  value={inputs.adressline3} onChange={handleChange} fullWidth /><br/>
+            <FormLabel>Date</FormLabel>
+            <TextField name="date" type="date" varaint="outlined"  value={inputs.date} onChange={handleChange} fullWidth /><br/>
             <Button variant="contained"   size="medium" type="submit"  fullWidth >Register</Button><br/>
-            <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/" fullWidth>Back</Button>
+            <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/Home" fullWidth>Back</Button>
         </Box>
       </form>
       </div>

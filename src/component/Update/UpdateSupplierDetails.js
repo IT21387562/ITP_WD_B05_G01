@@ -11,7 +11,7 @@ const UpdateSupplierDetails = () => {
     useEffect(()=>{
         const fetchHandler=async()=>{
             await axios
-            .get(`http://localhost:5000/suppliers/${id}`)
+            .get(`http://localhost:5000/suppliers/Allsuppliers/search/${id}`)
             .then((res)=>res.data)
             .then(data=>setInputs(data.supplier));
         };
@@ -19,7 +19,7 @@ const UpdateSupplierDetails = () => {
     },[id]);
 
     const sendRequest=async()=>{
-         await axios.put(`http://localhost:5000/suppliers/${id}`,{
+         await axios.put(`http://localhost:5000/suppliers/Allsuppliers/search/${id}`,{
             name:String(inputs.name),
             email:String(inputs.email),
             contact:String(inputs.contact),

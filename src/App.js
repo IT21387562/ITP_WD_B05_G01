@@ -10,9 +10,20 @@ import Supplies from './component/Supplies/Supplies';
 import SuppliesDetail from "./component/Supplies/SuppliesDetail";
 import SupplierHome from "./component/SupplierHome";
 import UpdateSupplierDetails from "./component/Update/UpdateSupplierDetails";
-import SupplierUpdate from "./component/SupplierUpdate";
-import SupplierReceipt from "./component/SupplierReceipt";
 import ReceiptDetails  from "./component/Receipt/ReceiptDetails";
+import SupplierReports from "./component/Reports/SupplierReportFolder/SupplierReports";
+import Indivual from "./component/Reports/SupplierReportFolder/Indivual";
+import SupplierUpdateDetails from "./component/Supplier/SupplierUpdateDetails";
+import DailySupply from "./component/Reports/DailySupplies/DailySupply";
+import DailySupplyReport from "./component/Reports/DailySupplies/DailySupplyReport";
+import RegistraionReport from "./component/Reports/RegistrationReports/RegistraionReport";
+import RegistrationReportDetails from "./component/Reports/RegistrationReports/RegistrationReportDetails";
+import SuppliesBySupplier from "./component/Reports/DailySupplies/SuppliesBySupplier";
+import LoginPage from "./component/LoginSys";
+import Signup from "./component/Signup";
+
+
+
 function App() {
   return (
    <React.Fragment>
@@ -21,7 +32,7 @@ function App() {
     </header>
     <main>
       <Routes>
-        <Route path="/" element={<Home/>} exact></Route>
+        <Route path="/Home" element={<Home/>} exact></Route>
         <Route path="/add" element={<Addsuppliers/>} exact></Route>
         <Route path="/suppliers" element={<Suppliers/>} exact></Route>
         <Route path="/suppliers/:id" element={<SupplierDetail/>}exact></Route>
@@ -29,11 +40,23 @@ function App() {
         <Route path="/supplies" element={<Supplies/>} exact></Route>
         <Route path="/supplies/:id" element={<SuppliesDetail/>}exact></Route>
         <Route path="/supplierHome" element={<SupplierHome/>} exact></Route>
-        <Route path="/details/:id" element={<UpdateSupplierDetails/>} exact></Route>
-        <Route path="/supplierUpdate" element={<SupplierUpdate/>} exact></Route>
-        <Route path="/supplierReceipt" element={<SupplierReceipt/>}exact></Route>
+        <Route path="/details/:name" element={<UpdateSupplierDetails/>} exact></Route>
         <Route path="/receiptDetails/:id" element={<ReceiptDetails/>}exact></Route>
+        <Route path="/supplierReports" element={<SupplierReports/>}exact></Route>
+        <Route path="/individual" element={<Indivual/>}exact></Route>
+        <Route path="/supplierupdateDetail/:name" element={<SupplierUpdateDetails/>}exact></Route>
+        <Route path="/dailysupply" element={<DailySupply/>}exact></Route>
+        <Route path="/dailysupplyreport" element={<DailySupplyReport/>}exact></Route>
+        <Route path="/regsitrationReport/:date" element={<RegistraionReport/>}></Route>
+        <Route path="/registrationReportDetails/:date" element={<RegistrationReportDetails/>}exact></Route>
+        <Route path="/suppliesBySupplier" element={<SuppliesBySupplier/>}exact></Route>
+        <Route path="/" element={<LoginPage/>}exact></Route>
+        <Route path="/signup" element={<Signup/>}exact></Route>
 
+       
+        
+
+        
       </Routes>
     </main>
    </React.Fragment>

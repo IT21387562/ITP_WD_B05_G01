@@ -70,7 +70,7 @@ const ReceiptDetails = () => {
             <Typography>& Private ltd</Typography>
             </div>
             </div>
-            <Typography variant='h4' align='center'>Receipt</Typography>
+            <Typography variant='h4' align='center'>Invoice</Typography>
             <FormLabel>Supplier Name</FormLabel> 
             <TextField name="name"   value={inputs.name} onChange={handleChange} fullWidth  InputProps={{readOnly: true,}} /><br/>
             <FormLabel>Weight</FormLabel>
@@ -93,9 +93,7 @@ const ReceiptDetails = () => {
             </div>
             <div className='receiptBottomfeilds'>
             <FormLabel>Date collected</FormLabel>
-            <TextField name="Datecollected" variant="outlined"  value={inputs.Datecollected} onChange={handleChange}  InputProps={{
-    readOnly: true,
-  }}/><br/>
+            <TextField name="Datecollected" variant="outlined"  value={inputs.Datecollected} onChange={handleChange}  InputProps={{readOnly: true,}}/><br/>
             </div>
             </div>
          

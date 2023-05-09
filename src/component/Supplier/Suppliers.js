@@ -5,7 +5,7 @@ import Supplier from '../Supplier/Supplier';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@mui/material';
 import Search from '../images/search.png'
-const URL="http://localhost:5000/suppliers";
+const URL="http://localhost:5000/suppliers/Allsuppliers";
 
 const fetchHandler=async()=>{
   return await axios.get(URL).then((res)=>res.data)
@@ -62,7 +62,7 @@ const Suppliers = () => {
         </div>
       ))}  
        <div className='btn'>
-        <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/" >Back</Button>
+        <Button  variant="contained" color="secondary" size="medium"  LinkComponent={NavLink} to="/Home" >Back</Button>
       </div>
     </div>
   );
